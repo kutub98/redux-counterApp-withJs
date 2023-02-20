@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter Application -Javascript</title>
+
+    <!-- tailwind css CDN Link  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/redux@latest/dist/redux.min.js"></script>
+
+    <link rel="stylesheet" href="tailwind.config.js" />
+  </head>
+  <body>
+    <div class="CounterSection w-full">
+      <div class="counterBox w-1/2 m-auto bg-gray-50 text-black shadow-md rounded p-6 text-center">
+        <h1 class="text-xl">Counter Application</h1>
+        <div>
+          <div class="counter" id="counter"></div>
+          <div class="actionButton">
+            <button class="bg-green-500 text-white font-semibold px-5 py-3 rounded" id="Increment">Increment</button>
+            <button class="bg-red-500 text-white ml-2 font-semibold px-5 py-3 rounded" id="Decrement">Decrement</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/Inde.js"></script>
+  </body>
+</html>
