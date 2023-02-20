@@ -7,6 +7,11 @@ const DecrementCounter = document.getElementById('Decrement')
 
 // select dom elements end -----//
 
+// action identifier  start
+
+const Increment = "Increment";
+const Decrement = "Decrement";
+// action identifier end
 
 //  setup initialState 
 const initialState = {
@@ -14,12 +19,12 @@ const initialState = {
 }
 
 const counterReducer =(state = initialState, action)=>{
-    if(action.type === "Increment"){
+    if(action.type === Increment){
         return {
             ...state,
             value: state.value + action.payload,
         }
-    }else if(action.type === "Decrement"){
+    }else if(action.type === Decrement){
         return{
             ...state,
             value: state.value - action.payload,
@@ -41,13 +46,13 @@ store.subscribe(render)
 
 IncrementCounter.addEventListener('click', ()=>{
     store.dispatch({
-        type: 'Increment',
+        type: Increment,
         payload: 2,
     })
 })
 DecrementCounter.addEventListener('click', ()=>{
     store.dispatch({
-        type: 'Decrement',
+        type: Decrement,
         payload: 2,
     })
 })
